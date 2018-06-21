@@ -1,0 +1,4 @@
+#!/bin/sh
+virtualenv-3 local
+local/bin/pip install pyyaml openpyxl xlutils pandas pyinstaller
+local/bin/pyinstaller -F --hidden-import pandas._libs.tslibs.np_datetime --hidden-import pandas._libs.tslibs.nattype --hidden-import pandas._libs.skiplist --hidden-import openpyxl convert.py
