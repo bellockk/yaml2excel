@@ -1,6 +1,6 @@
 import sys
 import logging
-from yaml2excel import yaml2excel
+from yaml2excel import to_excel
 from excel2yaml import excel2yaml
 from parse_arguments import parse_arguments
 from parse_arguments import __version__
@@ -8,7 +8,7 @@ from parse_arguments import __version__
 
 def main(args):
     if args.to_excel:
-        yaml2excel(args.output_path, args.input_path)
+        to_excel(args.output_path, args.input_path)
     else:
         excel2yaml(args.output_path, args.input_path)
 
